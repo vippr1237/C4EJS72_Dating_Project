@@ -41,7 +41,7 @@ submitBtn.addEventListener('click',async function(e){
             'img3' : img3.value,
         }
         await postData('https://5ecfb1de16017c00165e2e6b.mockapi.io/user',data)
-        window.location.href = 'file:///E:/c4e72/hoangSon-c4e72/final-project/index.html'
+        window.location.href = 'index.html'
     }
     else {
         alert('Wrong input, try again')

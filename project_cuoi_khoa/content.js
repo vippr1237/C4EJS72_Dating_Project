@@ -9,10 +9,11 @@ let nopeBtn = document.getElementById('nope')
 let preBtn = document.getElementById('previous')
 let img = document.getElementById('img')
 let id = sessionStorage.getItem('id')
+let objName = document.getElementById('objName')
 
 logoutBtn.addEventListener('click', function(){
     sessionStorage.clear()
-    window.location.href = 'file:///E:/c4e72/hoangSon-c4e72/final-project/index.html'
+    window.location.href = 'index.html'
 })
 
 async function getData(){
@@ -39,9 +40,10 @@ showProfile()
 
 async function render(i){
     let data = await getData()
-    let newData = data.splice(id-1,1)
     let index = 1
+    sessionStorage.setItem('objectID',i+1)
     img.src = data[i][`img${index}`]
+    objName.innerText += data[i]['name']
     nextBtn.addEventListener('click', function(){
         if(index<3){
             index++
@@ -60,6 +62,64 @@ async function render(i){
             img.src = data[i]['img1']
         }
     })
+    // nopeBtn.addEventListener('click', function(){
+    //     if (i+1<data.length){
+    //         i++
+    //         render(i)
+    //     }
+    //     else {
+    //         render(data.length)
+    //     }
+    // })
+
 }
 
-render(3)
+//render(10)
+//render(3)
+
+async function dislike(){
+    let i=0
+    const data = await getData()
+    if (sessionStorage.getItem('id') !== 1){
+        render(i)
+        nopeBtn.addEventListener('click', function(){
+            objName.innerText = 'Name: '
+            img.src = ''
+            if (i+1<data.length){
+                i++
+                render(i)
+            }
+            else {
+                render(data.length)
+            }
+        })
+    }
+}
+
+dislike()
+
+async function like(){
+    const data = await getData()
+    let matchedID = []
+    likeBtn.addEventListener('click', function(){
+        matchedID.push(sessionStorage.getItem('objectID'))
+        fetch(`https://5ecfb1de16017c00165e2e6b.mockapi.io/user/${sessionStorage.getItem('id')}`,{
+        method: 'PUT',
+        body: JSON.stringify({
+            'matchedID' : matchedID
+        }),
+        headers: {
+            'Content-type': 'application/json'
+        }
+        })
+        let objID = sessionStorage.getItem('objectID')
+        objID++
+        objName.innerText = 'Name: '
+        img.src = ''
+        sessionStorage.setItem('objectID',objID)
+        render(objID-1)
+    })
+    
+}
+
+like()
