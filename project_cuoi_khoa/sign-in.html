@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="sign-in.css">
+    <link rel="stylesheet" href="E:\New folder (2)\fontawesome-free-5.13.0-web\css\all.css">
 </head>
 <body>
-    <h1>Dating</h1>
-    <form>
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter your username" id="uname">
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter your password" id="pw">
-        <button id="login">Log In</button>
-    </form>
+    <div class="content">
+        <div class="line1">
+            <hr style="margin-top:20%">
+        </div>
+        <div class="text">
+            <p>ĐĂNG NHẬP</p>
+        </div>
+        <div class="line2">
+            <hr style="margin-top:20%">
+        </div>
+        <form class="sign-in">
+
+        </label>
+        <i class="fas fa-user" id="icon1">
+        
+        </i>
+        <input type="text" placeholder="Enter Username" id="uname">
+        
+        <br>
+       
+        <i class="fas fa-lock" id="icon2"></i>
+        <input type="password" placeholder="Enter Password" id="pw">
+        <br>
+        <p style="text-align: right; margin-right: 10%;"><a href="" style="text-decoration: none; color: aqua; ">Quên Mật Khẩu</a></p>
+        <button id="login"><a href="" style="margin-left: 150px;text-decoration: none;">Login</a></button>
+        <button id="sign-up"><a href="" style="margin-left: 120px;text-decoration: none;">Đăng Kí Tài Khoản</a></button>
+        </form>
+        <br>
+        <hr style="width: 60%;">
+        <br>
+        <p style="text-align:center"><a class="return" href="" style="font-size: large;text-decoration: none;">Trở Lại Trang Chủ</a></p>
+
+    </div> 
     <script src="sign-in.js"></script>
 </body>
 </html>

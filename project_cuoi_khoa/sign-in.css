@@ -1,0 +1,86 @@
+.content{
+    background-image: url(background.jpeg);
+    height: 500px;
+    width: 30%;
+    margin: auto;
+    margin-top: 100px;
+}
+.line1{
+    width: 25%;
+    height: 50px;
+    display: inline;
+    float: left;
+}
+.text{
+    width:50% ;
+    height: 50px;
+    display: inline;
+    float: left;
+    text-align: center;
+    font-size: larger;
+}
+.line2{
+    width: 25%;
+    height: 50px;
+    display: inline;
+    float: left;
+}
+.sign-in{
+    position: relative;
+}
+#icon1{
+    position: absolute;
+    font-size: larger;
+    top: 25%;
+    left: 3%;
+}
+#icon2{
+    position: absolute;
+    font-size: larger;
+    top:42%;
+    left: 3%;
+}
+#uname{
+    padding: 10px 190px 10px 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#pw{
+    padding: 10px 190px 10px 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#login{
+    background-color: aqua;
+    padding: 10px 175px 10px 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    text-align: center;
+}
+#login:hover {
+    background-color:white;
+    color: aqua;
+}
+#sign-up{
+    padding: 10px 125px 10px 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    text-align: center;
+    background-color: transparent;
+}
+#sign-up:hover {
+    background-color:aqua;
+}
+return:hover{
+    color: white;
+}
+   
+
