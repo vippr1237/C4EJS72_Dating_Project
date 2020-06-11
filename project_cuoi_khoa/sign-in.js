@@ -23,7 +23,7 @@ async function render(){
             return ((x['username'] == uname.value) && (x['password'] == password.value))
         })
         if (findUser != undefined){
-            window.location.href = 'file:///E:/c4e72/hoangSon-c4e72/final-project/content.html'
+            window.location.href = 'content.html'
             sessionStorage.setItem('uname', uname.value)
             sessionStorage.setItem('password', password.value)
             sessionStorage.setItem('id', data[findIndex]['id'])
