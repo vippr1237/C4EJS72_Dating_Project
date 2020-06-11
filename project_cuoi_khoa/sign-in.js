@@ -13,7 +13,7 @@ async function getData(){
 async function render(){
     const data = await getData()
     loginBtn.addEventListener('click', function(e){
-        e.preventDefault()
+        e.preventDefault();
         console.log(uname.value,password.value)
         let findUser = data.find(function(x){
             return ((x['username'] == uname.value) && (x['password'] == password.value))
